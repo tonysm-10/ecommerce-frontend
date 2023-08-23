@@ -1,0 +1,149 @@
+.navbar-page{
+  width: 100%;
+  padding: 2rem;
+  background-color:#ECECEC;
+  color: white;
+  position: sticky;
+  top: 0;
+}
+.navbar{
+  width: 100%;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  }
+
+
+  .nav-links{
+    position: relative;
+    right: 5.5rem;
+  }
+
+  .link{
+    padding: 1rem;
+    color: lightcoral;
+    cursor: pointer;
+  }
+  .link:hover{
+    background-color: gray;
+    opacity: .5;
+  }
+
+  .sidebar{
+    position: fixed;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    width: 50%;
+    height: 100%;
+    background-color: white;
+    color: black;
+    overflow-y: scroll;
+
+  }
+  
+  .sidebar h3{
+    text-align: center;
+    color: lightgray;
+    text-shadow: 2px 2px black;
+  }
+  .sidebar a{
+    position: absolute;
+    left: 0;
+    cursor: pointer;
+    border: 1px solid white;
+    border-radius: 100%;
+    background-color: lightcoral;
+    color: white;
+    padding: .4rem .9rem;
+  }
+
+
+  .sidebar a:hover{
+    opacity: .6;
+  }
+
+.sidebar .img{
+  max-width: 150px;
+  border-left: solid lightcoral 4px;
+  /* border-bottom: solid lightcoral 2px;
+  padding-bottom: 3rem; */
+  padding-left: 3rem;
+}
+
+.cart{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.details{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.remove-item{
+  padding: 1rem 2rem;
+  border: none;
+  background-color: lightcoral;
+}
+
+.margin{  
+  padding: .5rem 0;
+  margin: 0;
+}
+  @keyframes slideFromRight {
+    from {
+      transform: translateX(100%); 
+    }
+    to {
+      transform: translateX(0); 
+    }
+  }
+  
+  .slide-from-right {
+    animation: slideFromRight 0.5s ease-in-out; 
+  }
+  .title{
+    font-family: Helvetica, Arial, sans-serif;
+    margin: 0 auto;
+    color: black;
+    text-shadow: 1.5px 1.5px lightcoral;
+  }
+
+
+  @media screen and (max-width: 652px) {
+
+    .navbar{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      }
+
+      .nav-links{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        right: 0;
+      }
+      .navbar-page{
+        padding: 1rem;
+      }
+  }
+
+
+
+
+
+ 
+
+
+
+
+
+
+

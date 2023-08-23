@@ -1,0 +1,34 @@
+.footer-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  justify-items: center;
+  padding: 0.5rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+   .footerName {
+    font-size: 12px;
+    text-decoration: none;
+    color:  black;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    font-family: Montserrat, sans-serif;
+  }
+  
+  
+  .icon-list {
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .icon {
+    color: black;
+    margin: 0 1rem;
+  }
+  
+
+  
+  
