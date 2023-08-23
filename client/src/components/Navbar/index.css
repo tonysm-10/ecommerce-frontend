@@ -56,6 +56,7 @@
     border-radius: 100%;
     background-color: lightcoral;
     color: white;
+    text-decoration: none;
     padding: .4rem .9rem;
   }
 
@@ -118,7 +119,6 @@
 
 
   @media screen and (max-width: 652px) {
-
     .navbar{
       display: flex;
       flex-direction: column;
@@ -135,6 +135,22 @@
         padding: 1rem;
       }
   }
+
+  @media screen and (max-width: 802px) {
+          .cart{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 3rem;
+          }
+          .sidebar .img{
+            max-width: 200px;
+            padding-top: 1rem;
+            border-top: solid lightcoral 4px;
+            border-left: none;
+            padding-left: 0;
+          }
+  }
+
 
 
 
