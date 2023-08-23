@@ -4,7 +4,7 @@ import './index.css';
 const Navbar = function ({removeFromCart, cart, openSidebar, closeSidebar, isOpen }) {
   const sidebar = (
     <div className='sidebar slide-from-right'>
-      <a onClick={closeSidebar}>x</a>
+      <a href='#' onClick={closeSidebar}>x</a>
       <h3>CART</h3>
       {cart.map((product) => (
         <div className='cart' key={product.id}>
