@@ -17,6 +17,17 @@
   min-width: 300px;
   max-width: 370px;
   height: 470px;
+  animation: fromleft 1s ease-out;
+}
+
+@keyframes fromleft {
+  from {
+    transform: translateY(-250%);
+  }
+
+  to {
+    transform: translateY(0%);
+  }
 }
 .product-card:hover{
   border: 2px solid black;

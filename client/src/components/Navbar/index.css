@@ -24,10 +24,21 @@
     padding: 1rem;
     color: lightcoral;
     cursor: pointer;
+    animation: popup 1s ease-in;
   }
   .link:hover{
     background-color: gray;
     opacity: .5;
+  }
+
+  @keyframes popup {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;;
+    }
   }
 
   .sidebar{
@@ -40,9 +51,17 @@
     background-color: white;
     color: black;
     overflow-y: scroll;
-
+    animation: slidefromright 800ms ease-in;
   }
+  @keyframes slidefromright {
+    from {
+      transform: translateX(100%);
+    }
   
+    to {
+      transform: translateX(0%);
+    }
+  }
   .sidebar h3{
     text-align: center;
     color: lightgray;
@@ -98,25 +117,26 @@
   padding: .5rem 0;
   margin: 0;
 }
-  @keyframes slideFromRight {
-    from {
-      transform: translateX(100%); 
-    }
-    to {
-      transform: translateX(0); 
-    }
-  }
+
   
-  .slide-from-right {
-    animation: slideFromRight 0.5s ease-in-out; 
-  }
+
   .title{
     font-family: Helvetica, Arial, sans-serif;
     margin: 0 auto;
     color: black;
     text-shadow: 1.5px 1.5px lightcoral;
+    animation: slidein 1s ease-in-out;
   }
 
+  @keyframes slidein {
+    from {
+      transform: translateX(-100%);
+    }
+  
+    to {
+      transform: translateX(0%);
+    }
+  }
 
   @media screen and (max-width: 652px) {
     .navbar{
