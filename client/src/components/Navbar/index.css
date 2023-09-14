@@ -48,6 +48,9 @@
     padding: 0;
     width: 50%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: white;
     color: black;
     overflow-y: scroll;
@@ -108,7 +111,7 @@
 }
 
 .remove-item{
-  padding: 1rem 2rem;
+  padding: .8rem 1rem;
   border: none;
   background-color: lightcoral;
 }
@@ -128,6 +131,27 @@
     animation: slidein 1s ease-in-out;
   }
 
+  .cardCount{
+    border: 1px solid lightcoral;
+    position: relative;
+    right: .4rem;
+    bottom: 1rem;
+    color: white;
+    background-color: lightcoral;
+    font-size: 16px;
+    border-radius: .6rem;
+    padding: 1px 4.5px;
+  }
+
+  .checkout{
+    padding: 1rem 4rem;
+    border: none;
+    font-size: 20px;
+    border-radius: .5rem;
+    cursor: pointer;
+    background-color: lightseagreen;
+    margin:  1.5rem 0;
+  }
   @keyframes slidein {
     from {
       transform: translateX(-100%);

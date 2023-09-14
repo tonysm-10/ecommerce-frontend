@@ -211,7 +211,9 @@ setCountNine((prev)=> prev - 1)
         setCart([...cart, productToAdd]);
       }
     };
+const cartCount = cart.length
 
+console.log(cartCount)
     const removeFromCart = (productId) => {
 
         const newCart = cart.filter((product) => product.id !== productId);
@@ -228,6 +230,7 @@ setCountNine((prev)=> prev - 1)
     return(
         <div>
             <Navbar
+            cartCount={cartCount}
             handleAddOne={handleAddOne} handleMinusOne={handleMinusOne} 
             handleAddTwo={handleAddTwo} handleMinusTwo={handleMinusTwo} 
             handleAddThree={handleAddThree} handleMinusThree={handleMinusThree} 
