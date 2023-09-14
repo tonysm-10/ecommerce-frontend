@@ -17,8 +17,10 @@ const Navbar = function ({  cartCount ,removeFromCart, cart, openSidebar, closeS
           </div>
         </div>
       ))}
+{
+  cartCount !== 0 ? <button className='checkout'>Checkout</button> : null
+}
 
-      <button className='checkout'>Checkout</button>
     </div>
   );
 
@@ -28,7 +30,11 @@ const Navbar = function ({  cartCount ,removeFromCart, cart, openSidebar, closeS
         <h1 className='title'>GYM ESSENTIALS</h1>
         <div className='nav-links'>
           <a href='/#' onClick={openSidebar} className='link'>
-            cart <span className='cardCount'>{cartCount}</span>
+            cart 
+            {
+  cartCount !== 0 ? <span className='cardCount'>{cartCount}</span> : null
+}
+            
           </a>
           <a href='/#' className='link'>contact</a>
         </div>
