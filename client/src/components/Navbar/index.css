@@ -5,6 +5,7 @@
   color: white;
   position: sticky;
   top: 0;
+  box-shadow: 1px 1px black;
 }
 .navbar{
   width: 100%;
@@ -30,7 +31,9 @@
     background-color: gray;
     opacity: .5;
   }
-
+.p-tag{
+  font-size: 13px;
+}
   @keyframes popup {
     from {
       opacity: 0;

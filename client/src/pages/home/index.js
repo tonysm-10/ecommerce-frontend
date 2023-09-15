@@ -4,6 +4,7 @@ import ProductList from "../../components/Card/ProductList"
 import { useState } from "react"
 import img1 from '../../components/Card/assets/younglacompress.webp';
 import img2 from '../../components/Card/assets/youngla.png'
+import img3 from '../../components/Card/assets/backpack.png'
 const Home = function (){
     const [isOpen, setIsOpen] = useState(false)
     // On click sidebar opens
@@ -129,9 +130,9 @@ setCountNine((prev)=> prev - 1)
       id: 2,
      },
       {
-      img: img1,
+      img: img3,
       name: 'SUPERHERO SHIRT',
-      price: '38.00',
+      price: '58.00',
       inStock: 10,
       count: countThree,
       handleAdd: handleAddThree,
@@ -139,9 +140,9 @@ setCountNine((prev)=> prev - 1)
       id: 3,
      },
       {
-      img: img2,
+      img: img1,
       name: 'CLASSIC T-SHIRT',
-      price: '48.00',
+      price: '38.00',
       inStock: 1,
       count: countFour,
       handleAdd: handleAddFour,
@@ -149,7 +150,7 @@ setCountNine((prev)=> prev - 1)
       id: 4,
      },
       {
-      img: img1,
+      img: img2,
       name: 'CLASSIC T-SHIRT',
       price: '48.00',
       inStock: 30,
@@ -159,9 +160,9 @@ setCountNine((prev)=> prev - 1)
       id: 5,
      },
       {
-      img: img2,
+      img: img3,
       name: 'SUPERHERO SHIRT',
-      price: '38.00',
+      price: '58.00',
       inStock: 10,
       count: countSix,
       handleAdd: handleAddSix,
@@ -171,7 +172,7 @@ setCountNine((prev)=> prev - 1)
       {
       img: img1,
       name: 'CLASSIC T-SHIRT',
-      price: '48.00',
+      price: '38.00',
       inStock: 3,
       count: countSeven,
       handleAdd: handleAddSeven,
@@ -181,7 +182,7 @@ setCountNine((prev)=> prev - 1)
       {
       img: img2,
       name: 'SUPERHERO SHIRT',
-      price: '38.00',
+      price: '48.00',
       inStock: 7,
       count: countEight,
       handleAdd: handleAddEight,
@@ -189,9 +190,9 @@ setCountNine((prev)=> prev - 1)
       id: 8,
      },
       {
-      img: img1,
+      img: img3,
       name: 'CLASSIC T-SHIRT',
-      price: '48.00',
+      price: '58.89',
       inStock: 4,
       count: countNine,
       handleAdd: handleAddNine,
@@ -213,12 +214,20 @@ setCountNine((prev)=> prev - 1)
     };
 const cartCount = cart.length
 
-console.log(cartCount)
+// console.log(cartCount)
     const removeFromCart = (productId) => {
 
         const newCart = cart.filter((product) => product.id !== productId);
         setCart(newCart)
     };
+    const getSubtotal = () => {
+      return cart.reduce((subtotal, item) => {
+        const sum = +subtotal + (+item.price * item.count);
+        return sum;
+      }, 0);
+    };
+  let subtotal = getSubtotal()
+    
     
     // const deleteFromPlaylist = (trackToRemove)=>{
     //   const removeFromPlaylist = playlist.filter((track => track !== trackToRemove))
@@ -230,6 +239,7 @@ console.log(cartCount)
     return(
         <div>
             <Navbar
+            subtotal={subtotal}
             cartCount={cartCount}
             handleAddOne={handleAddOne} handleMinusOne={handleMinusOne} 
             handleAddTwo={handleAddTwo} handleMinusTwo={handleMinusTwo} 
