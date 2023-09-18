@@ -3,11 +3,13 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  background-color: #D4D4D4;
+  width: inherit;
+  background-color: whitesmoke;
   gap: 5rem;
   padding: 4em 0;
+  margin: 0;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .product-card {
@@ -65,6 +67,16 @@
   font-weight: bold;
 }
 
+.price-discount {
+  color: coral;
+  font-size: 16px;
+  padding: .3rem;
+  margin: 0;
+  font-weight: bold;
+}
+.flex{
+  display: flex;
+}
 .card-stock {
   font-size: 14px;
   color: #888;
@@ -105,9 +117,5 @@
   font-size: 20px;
 }
 
-#no-scroll {
-  overflow: hidden;
-}
 
-/* Responsive styles */
 

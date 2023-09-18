@@ -12,7 +12,7 @@ const Navbar = function ({ subtotal, cartCount ,removeFromCart, cart, openSideba
           <img className='img' src={product.img} alt={product.name} />
           <div className='details'>
             <h5 className='margin'>{product.name}</h5>
-            <p className='margin p-tag'>{product.price}</p>
+            <p className='margin p-tag'>${product.discount ? product.price - 10 : product.price}</p>
             <p className='margin p-tag'>Selected {product.count}</p>
             <button onClick={() => removeFromCart(product.id)} className='remove-item'>Remove Item</button>
           </div>

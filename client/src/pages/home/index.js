@@ -131,12 +131,13 @@ setCountNine((prev)=> prev - 1)
      },
       {
       img: img3,
-      name: 'SUPERHERO SHIRT',
+      name: 'YOUNGLA BACKPACK',
       price: '58.00',
       inStock: 10,
       count: countThree,
       handleAdd: handleAddThree,
       handleMinus: handleMinusThree,
+      discount: true,
       id: 3,
      },
       {
@@ -161,12 +162,13 @@ setCountNine((prev)=> prev - 1)
      },
       {
       img: img3,
-      name: 'SUPERHERO SHIRT',
+      name: 'YOUNGLA BACKPACK',
       price: '58.00',
       inStock: 10,
       count: countSix,
       handleAdd: handleAddSix,
       handleMinus: handleMinusSix,
+      discount: true,
       id: 6,
      },
       {
@@ -191,12 +193,13 @@ setCountNine((prev)=> prev - 1)
      },
       {
       img: img3,
-      name: 'CLASSIC T-SHIRT',
+      name: 'YOUNGLA BACKPACK',
       price: '58.89',
       inStock: 4,
       count: countNine,
       handleAdd: handleAddNine,
       handleMinus: handleMinusNine,
+      discount: true,
       id: 9,
      }
     ];
@@ -222,10 +225,12 @@ const cartCount = cart.length
     };
     const getSubtotal = () => {
       return cart.reduce((subtotal, item) => {
-        const sum = +subtotal + (+item.price * item.count);
+        const itemPrice = item.discount ? item.price - 10 : item.price;
+        const sum = +subtotal + (+itemPrice * item.count);
         return sum;
       }, 0);
     };
+    
   let subtotal = getSubtotal()
     
     

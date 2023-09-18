@@ -1,9 +1,10 @@
 .footer-container {
   display: grid;
+  background-color: whitesmoke;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto;
   justify-items: center;
-  padding: 0.5rem;
+  padding: 0.5rem 0;
   position: relative;
   bottom: 0;
   width: 100%;

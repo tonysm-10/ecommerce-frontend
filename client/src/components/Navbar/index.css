@@ -1,6 +1,6 @@
 .navbar-page{
   width: 100%;
-  padding: 2rem;
+  padding: 2rem 0;
   background-color:#ECECEC;
   color: white;
   position: sticky;
@@ -49,13 +49,15 @@
     right: 0;
     margin: 0;
     padding: 0;
-    width: 50%;
+    width: 40%;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: white;
-    color: black;
+    background-color: black;
+    opacity: .95;
+    color: lightgray;
+    z-index: 999;
     overflow-y: scroll;
     animation: slidefromright 800ms ease-in;
   }
@@ -181,7 +183,7 @@
         right: 0;
       }
       .navbar-page{
-        padding: 1rem;
+        padding: 1rem 0;
       }
   }
 
